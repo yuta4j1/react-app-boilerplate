@@ -14,7 +14,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['react', 'es2015']
+                    presets: ['@babel/react', '@babel/preset-env']
                 }
             }
         ]
@@ -27,14 +27,15 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'public/index.html',
-            filename: 'index.html',
+            //filename: 'dist/bundle.js',
             inject: 'body'
         })
     ],
     devServer: {
-        contentBase: path.join(__dirname, 'public'),
+        contentBase: path.join(__dirname, 'dist'),
         port: 9000,
         lazy: true,
-        filename: 'index.html'
+        filename: 'index.html',
+        hotOnly: true
     }
 }
