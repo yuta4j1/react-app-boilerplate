@@ -9,9 +9,13 @@
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.16.4",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
@@ -22,6 +26,7 @@
   },
   "scripts": {
     "bundle": "webpack",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server",
+    "format": "prettier --config ./.prettierrc --write ./src/**/*.{js,jsx} | eslint -c .eslintrc src/**/*.{js,jsx}"
   }
 }
