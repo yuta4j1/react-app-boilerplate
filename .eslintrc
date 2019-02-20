@@ -1,0 +1,14 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "ecmaVersion": 7,
+            "jsx": true,
+            "modules": true
+        }
+    },
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": "error"
+     }
+}
